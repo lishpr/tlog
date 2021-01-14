@@ -1,8 +1,8 @@
 # Site settings
 title:          Dokrust
 description:    "Shori's log"
-baseurl:        "/log"
-url:            "https://lishpr.github.io/log"
+baseurl:        "/tlog"
+url:            "https://lishpr.github.io/tlog"
 
 # Google Analytics
 google_analytics: UA—XXXXXXXX-X
