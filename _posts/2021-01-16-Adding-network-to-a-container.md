@@ -12,11 +12,19 @@ Docker provided four options for networking when starting a container. We may se
 
 And the goal would be to add network support to the netless container so that it may visit the internet or other containers.
 
+First, let's take a look at the topology of a container network: 
+
+
+![](../assets/network.png)
+The general idea is, each container runs in a network namespace (presumably represented by those colored container boxes). And those network namespaces are connected to the Linux bridge (the purple docker0 in the picture). The two-way arrows represent virtual ethernets.
+
+With that in the mind, we are going to reconstruct the network step by step.
+
 <br />
 
 ## Create network namespace
 
-First, we need the PID of the container process to get it a network namespace (netns).
+We need to obtain the PID of the container process to get it a network namespace (netns).
 
 ```
 # docker ps
@@ -31,7 +39,7 @@ Therefore, we could add a new netns by running
 ```
 # ln -s /proc/$pid/ns/net /var/run/netns/$pid
 ```
-*Only by creating a symbolic link could we make the new netns work (by assuring that the container is of the created namespace). It's tested that solely by running the* ```ip netns add``` command *does not work.*
+*Only by creating a symbolic link could we make the new netns work (by assuring that the container is of the created namespace). It's tested that solely by running the* ```ip netns add``` *command does not work.*
 
 Examine by the following command, we could see that the netns has been successfully created.
 ```
@@ -109,6 +117,7 @@ In this step, we'll connect to the internet.
 <br />
 
 ## References
+[Docker -- 从入门到实践](https://yeasy.gitbook.io/docker_practice/)\
 [docker网络原理](https://github.com/int32bit/notes/blob/master/cloud/docker网络原理.md)\
 [How Docker Container Networking Works - Mimic It Using Linux Network Namespaces](https://dev.to/polarbit/how-docker-container-networking-works-mimic-it-using-linux-network-namespaces-9mj)\
 [Introduction to Container Networking](https://rancher.com/learning-paths/introduction-to-container-networking/)
