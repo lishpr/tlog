@@ -1,8 +1,8 @@
 # Site settings
 title:          Dokrust
 description:    "Shori's log"
-baseurl:        "/log"
-url:            "https://lishpr.github.io/log"
+baseurl:        ""
+url:            "https://lishpr.github.io"
 
 # Google Analytics
 google_analytics: UA—XXXXXXXX-X
@@ -10,7 +10,7 @@ google_analytics: UA—XXXXXXXX-X
 # Author
 author:
   name:         Shori Yu
-  url:          https://lishpr.github.io/log
+  url:          https://lishpr.github.io
   email:        lixyu57@gmail.com
 
 # Build settings
