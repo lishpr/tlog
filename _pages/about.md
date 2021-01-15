@@ -13,6 +13,9 @@ The motivation of the blog is simple: I have the time to do it as I'm on my gap 
 
 So, why not? I guess.
 
+<br />
+
+
 <p style="text-align: center;">
     <a style="color:#555" href="https://github.com/lishpr" target="_blank" rel="noopener">
         <i class="fab fa-github fa-3x"></i>
