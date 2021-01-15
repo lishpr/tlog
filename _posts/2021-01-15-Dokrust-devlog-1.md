@@ -12,9 +12,9 @@ This is the first week of development of Dokrust. As a fork of [vas-quod](https:
 
 <br />
 
-## Improvements
+# Improvements
 
-* ### Interactive shell
+* ## Interactive shell
 
 First, vas-quod cannot sustain an interactive bash. When the shell is passed in as the command to execute, it would terminate (and the ssh to my server got closed, too).
 ```
@@ -39,7 +39,7 @@ And the solution turns out to be simple. By adding the following line after wher
 let _proc_res = nix::sys::wait::waitpid(_child_pid, None);
 ```
 
-* ### Some refractoring
+* ## Some refractoring
 
 I guess the function signatures found in vas-quod, such as the ones shown below, could be improved by OO Design. Therefore I created a "Runtime" class that stores all the related information, so the functions could look cleaner. Also, by following the OO Design, the scalability of the code could be improved.
 
@@ -51,15 +51,15 @@ pub fn run_container(rootfs: &str, command: &str, command_args: Vec<&str>)
 
 <br />
 
-## Feature addition
+# Feature addition
 
-* ### Customizable hostnames
+* ## Customizable hostnames
 
 After the improvements above, the first thing I want to introduce is hostname customization, as it is simple for someone new to rust, and it is meaningful if I want to eventually run multiple instances of Dokrust containers.
 
 This is easy as invoking the ```sethostname()``` syscall.
 
-* ### CGroup quotas
+* ## CGroup quotas
 
 One important feature that containers offer is the isolation of processes. A part of the isolation is provided by Linux through Control Groups, where you can ascribe the quotas of CPU, memory, disk, network usage, etc for processes in a specfic container.
 
@@ -72,7 +72,7 @@ fs::write(cfs_quota, quota.as_bytes()).unwrap();
 fs::write(tasks, format!("{}", unistd::getpid().as_raw())).unwrap();
 ```
 
-* ### Directory mounting
+* ## Directory mounting
 
 Vas-quod provided the mounting of ```/proc``` into the rootfs by invoking the Mount Namespace. This is permanent as we want an isolated process id space. But we also wish to have files being mounted into the rootfs at runtime. 
 
@@ -80,6 +80,6 @@ This could also be done via the ```mount()``` syscall by passing in the ```MS_BI
 
 <br />
 
-## Next up
+# Next up
 
 In the original vas-quod repo, the author has network bridge support and mounting in the roadmap. As I have mounting somewhat naïvely setup, I feel networking support should be the core of development next week.
