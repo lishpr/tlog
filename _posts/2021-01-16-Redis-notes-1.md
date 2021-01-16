@@ -3,7 +3,7 @@ layout: post
 title:  "Understanding Redis: 1"
 author: "Shori"
 comments: false
-tags: Notes
+tags: Docs
 ---
 
 ## Prologue
