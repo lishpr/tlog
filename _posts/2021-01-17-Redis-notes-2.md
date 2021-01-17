@@ -45,45 +45,23 @@ intset->length = 3;
 intset->contents = [1, 2, 3];
 ```
 Thus in memory, it is stored 
-```c
-bit addr   0   15  31  47
-value      | 1 | 2 | 3 |
-```
+![](../assets/redis-2/intset1.png)
+
 
 Now, we want to add an integer ```65535``` of length ```int32_t``` into the ```intset```. The ```inset``` will have to set its encoding to ```INTSET_ENC_INT32```, and reallocate the ```contents``` array.
 
 * First, it will allocate memory enough for 4 ```int32_t``` integers.
 
-```c
-bit addr   0   15  31  47  63      95      127
-value      | 1 | 2 | 3 | ? |   ?   |   ?   |
-```
+![](../assets/redis-2/intset2.png)
+
 * Then, it will transfer the ```int16_t``` integers to ```int32_t``` length in the order from the last to the first.
 
-```c
-bit addr   0   15  31  47  63      95      127
-value      | 1 | 2 | 3 | ? |   3   |   ?   |
-                     |         ↑
-                     +---------+
-                  int16_t   int32_t
-
-bit addr   0   15  31      63      95      127
-value      | 1 | 2 |   2   |   3   |   ?   |
-                 |     ↑
-                 +-----+
-
-bit addr   0       31      63      95      127
-value      |   1   |   2   |   3   |   ?   |
-```
+![](../assets/redis-2/intset3.png)
 
 * Last, it will add the new integer ```65535``` into place and set the ```length``` field to 4.
 
-```c
-bit addr   0       31      63      95      127
-value      |   1   |   2   |   3   | 65535 |
-                                       ↑
-                                      add
-```
+![](../assets/redis-2/intset4.png)
+
 Now we are done, the ```intset``` now looks like:
 
 ```c
