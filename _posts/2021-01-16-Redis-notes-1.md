@@ -24,7 +24,7 @@ Redis is a Key-Value database. The Key is always a String while the Value can be
 
 Built with C, Redis replaced the by default ```char*``` type used to represent Strings with ```sds```.
 
-The data structure of sds is shown below.
+### 1.1.1 Implementation
 
 ```c
 typedef char *sds;
@@ -38,7 +38,7 @@ struct sdshdr {
 	char buf[]; 
 };
 ```
-### 1.1.1 Summary
+### 1.1.2 Summary
 
 There are a few advantages ```sds``` could offer compared to ```char*```.
 
@@ -48,7 +48,7 @@ There are a few advantages ```sds``` could offer compared to ```char*```.
 
 ```sds``` optimizes string append by allocating more memory in advance. This will lower the times that memory has to be reallocated. However, more memory space will be taken and the memory wouldn't be released automatically.
 
-### 1.1.2 Examples
+### 1.1.3 Examples
 1. ```SET``` command
 ```bash
 redis> SET msg "hello world"
@@ -146,7 +146,7 @@ Dicts, also known as Maps or Associative Arrays, is another data structure being
 
 It's used for creating the key space for the database.
 
-First, the implementation:
+### 1.3.1 Implementation
 
 ```c
 typedef struct dict {
@@ -190,18 +190,18 @@ The structure of the ```dict``` type could be illustrated as below:
 
 There are also very specific ways that Redis does rehashing, dict expansion, and dict shrink. As I feel that's not the core of the notes, I'll leave it to another time.
 
-### 1.3.1 The hashing algorithm
+### 1.3.2 Hashing algorithm
 
 There are two different hashing algorithms in use in Redis.
 * MurmurHash2 32 bit, which has good speed and distribution.
 * djb, which is case-insensitive.
 
-### 1.3.2 Summary
+### 1.3.3 Summary
 
 * The database and hash keys are implemented with ```dict``` in Redis.
 * ```dictht``` uses seperate chaining to resolve collision.
 
-### 1.3.3 Examples
+### 1.3.4 Examples
 
 ```bash
 redis> SET number 10086
