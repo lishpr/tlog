@@ -14,7 +14,7 @@ tags: Docs
 
 That is, if the largest integer is using ```int16_t```, then all of the integers in the set will be using ```int16_t```.
 
-Therefore, one notable attribute of ```intset``` is its ability ot **upgrade** to a new int type.
+Therefore, one notable attribute of ```intset``` is its ability to **upgrade** to a new int type.
 
 In Redis, if a set is integer only, and the size is not large, then Redis will use ```intset``` to store their value.
 
