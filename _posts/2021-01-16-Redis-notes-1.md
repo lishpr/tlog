@@ -8,9 +8,9 @@ tags: Docs
 
 ## Prologue
 
-Notes is a section where I document things that I learn.
+I will try to get acquainted with some of the latest technologies used in software engineering. So, out of no obvious reason, Redis will be my starting point I guess.
 
-I will start with Redis. The good things about Redis could be found on [this Amazon page](https://aws.amazon.com/redis/). And I will rely on the book [*The Design and Implementation of Redis*](http://redisbook.com) (Chinese) and the source code ([v2.6](https://github.com/huangz1990/annotated_redis_source), [current](https://github.com/redis/redis)) to facilitate understanding. I choose the 1st version of the book that corresponds with Redis v2 as it is a shorter read, and the core of Redis remain the same.
+The good things about Redis could be found on [this Amazon page](https://aws.amazon.com/redis/). And I will rely on the book [*The Design and Implementation of Redis*](http://redisbook.com) (Chinese) and the source code ([v2.6](https://github.com/huangz1990/annotated_redis_source), [current](https://github.com/redis/redis)) to facilitate understanding. I choose the 1st version of the book that corresponds with Redis v2 as it is a shorter read, and the core of Redis remain the same.
 
 Okay. Let's get started.
 
