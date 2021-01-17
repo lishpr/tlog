@@ -44,7 +44,7 @@ intset->encoding = INTSET_ENC_INT16;
 intset->length = 3;
 intset->contents = [1, 2, 3];
 ```
-Thus in memory, it is stored 
+Thus in memory, it is stored as
 ![](../assets/redis-2/intset1.png)
 
 
