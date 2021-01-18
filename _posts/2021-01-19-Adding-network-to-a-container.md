@@ -103,7 +103,11 @@ And now, test it again by running ```ping 10.1.1.2``` from outside the netns, we
 
 Now, we could have the container reach any device in the local network. 
 
-In this step, we'll connect to the internet.
+In this step, we'll connect to the internet. First, check 
+```iptables -L```. If you see ```Chain FORWARD (policy DROP)``` somewhere in the result, execute these commands: ```# iptables -F FORWARD && iptables -P FORWARD ACCEPT```.
+
+Then,
+
 
 ```
 # sysctl -w net.ipv4.ip_forward=1
@@ -113,10 +117,12 @@ In this step, we'll connect to the internet.
 # echo "nameserver 100.100.5.6" > /etc/netns/br0/resolv.conf
 ```
 
+Now, the container should be able to connect to the internet.
+
+
 <br />
 
 ## References
-[Docker -- 从入门到实践](https://yeasy.gitbook.io/docker_practice/)\
 [docker网络原理](https://github.com/int32bit/notes/blob/master/cloud/docker网络原理.md)\
 [How Docker Container Networking Works - Mimic It Using Linux Network Namespaces](https://dev.to/polarbit/how-docker-container-networking-works-mimic-it-using-linux-network-namespaces-9mj)\
 [Introduction to Container Networking](https://rancher.com/learning-paths/introduction-to-container-networking/)
