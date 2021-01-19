@@ -16,7 +16,7 @@ First, let's take a look at the topology of a container network:
 
 
 ![](../assets/network.png)
-The general idea is, each container runs in a network namespace (presumably represented by those colored container boxes). And those network namespaces are connected to the Linux bridge (the purple docker0 in the picture). The two-way arrows represent virtual ethernets.
+The general idea is, each container runs in a network namespace. And those network namespaces are connected to the Linux bridge. The two-way arrows represent virtual ethernets.
 
 With that in the mind, we are going to reconstruct the network step by step.
 
