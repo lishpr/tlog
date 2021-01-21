@@ -31,14 +31,16 @@ For now, you'll have to launch the container first, then run Dokrust again with 
 
 ### The network module
 
-Now, the network module is still very amateurishly written with directly-invoked shell commands from the Rust code. I plan to refractor the module with the ip-command crate. 
+Tweaks to the network module needs to be made gradually, but it's not on the top of the priority list as the current version does not impact usability.
+
+Now, the network module is very amateurishly written with directly-invoked shell commands from the Rust code. I plan to refractor the module with the ip-command crate. 
 
 It now has to be set after the container is up and running. I shall make it more streamlined through invoking threads.
 
 And, more thought need to be put with regard to multiple containers. For example, IP addresses need to be more dynamically allocated to each container.
 
-The DNS resolution is still being hard-coded into the container. I should make it dynamic, too.
+Last, the DNS resolution is still being hard-coded into the container. I should make it dynamic, too.
 
 ### Other
 
-As the ultimate goal is to run Android apps in the container,
+As the ultimate goal is to run Android apps in the container, I'm going to look into OpenGL and X-server support for Dokrust.
