@@ -35,7 +35,9 @@ It is recommended to expand your project by dividing the code into packages `mod
 
 And in `pom.xml`, we may find the options we selected in the start.spring.io page.
 
-![](../assets/spring/pom.png)
+<center>
+<img src="../assets/spring/pom.png" style="width:400px;">
+</center>
 
 Two dependency modules are by default selected. `spring-boot-starter`, and `spring-boot-starter-test`. As `spring-boot-starter-web` auto-refereces `spring-boot-starter`, we don't have to explicitly include it in `pom.xml`.
 
