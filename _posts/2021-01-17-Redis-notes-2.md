@@ -3,7 +3,7 @@ layout: post
 title:  "Understanding Redis: 2"
 author: "Shori"
 comments: false
-tags: Docs
+tags: Redis
 ---
 
 # Memory-mapping data structures

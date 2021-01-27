@@ -3,7 +3,7 @@ layout: post
 title:  "Adding Network Support to a Container"
 author: "Shori"
 comments: false
-tags: Docs
+tags: Containers
 ---
 
 Last time, I looked into the Linux foundation of containers. But I left out one important part, networking.

@@ -3,7 +3,7 @@ layout: post
 title:  "Understanding Redis: 4"
 author: "Shori"
 comments: false
-tags: Docs
+tags: Redis
 ---
 
 # Implementation of Functionalities: Transactions

@@ -3,7 +3,7 @@ layout: post
 title:  "Understanding Redis: 6"
 author: "Shori"
 comments: false
-tags: Docs
+tags: Redis
 ---
 
 # Operating Mechanisms

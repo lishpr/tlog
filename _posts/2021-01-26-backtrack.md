@@ -3,7 +3,7 @@ layout: post
 title:  "How to backtrack?"
 author: "Shori"
 comments: false
-tags: Docs
+tags: Job Hunt
 ---
 
 Well, the topic of this article is an algorithm, rather than a not-so-ideal behavior. This article will be a summary of the guide [here](https://mp.weixin.qq.com/s/nMUHqvwzG2LmWA9jMIHwQQ).

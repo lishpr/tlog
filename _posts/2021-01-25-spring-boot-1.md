@@ -3,7 +3,7 @@ layout: post
 title:  "Getting to Know Spring Boot: 1"
 author: "Shori"
 comments: false
-tags: Docs
+tags: Spring
 ---
 
 Upon finishing reading the [book]((http://redisbook.com)) on Redis, I decided to take on another popular technology in software engineering, the Spring framework.

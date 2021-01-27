@@ -3,7 +3,7 @@ layout: post
 title:  "How Linux Containers Work?"
 author: "Shori"
 comments: false
-tags: Docs
+tags: Containers
 ---
 
 Our Arm-based Android Gaming-in-the-cloud platforms are developed with Linux container technologies. The use of containers allow multiple instances of user application run in the server simultaneously. To solve the current issue that the servers are not performing at the desired level, investigating the tech specifications of containers would be a good start.
