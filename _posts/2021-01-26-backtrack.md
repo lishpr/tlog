@@ -100,27 +100,25 @@ for child in children:
 And that's all for the core of backtracking problems.
 
 ```java
-public class Answer {
-    private List<List<Integer>> ans = new LinkedList<>();
-
-    public List<List<Integer>> permutations(int[] nums) {
-        LinkedList<Integer> visited = new LinkedList<>();
-        backtrack(nums, visited);
+class Solution {
+    private List<List<Integer>> ans;
+    public List<List<Integer>> permute(int[] nums) {
+        ans = new ArrayList<>();
+        helper(nums, new LinkedList<Integer>());
         return ans;
     }
-
-    private void backtrack(int[] nums, LinkedList<Integer> visited) {
-        if (visited.size() == nums.length) {
-            res.add(new LinkedList(visited));
+    
+    private void helper(int[] nums, LinkedList<Integer> v) {
+        if (v.size() == nums.length) {
+            ans.add(new ArrayList<Integer>(v));
             return;
         }
-
+        
         for (int n : nums) {
-            if (visited.contains(n))
-                continue;
-            visited.add(n);
-            backtrack(nums, visited);
-            visited.removeLast();
+            if (v.contains(n)) continue;
+            v.add(n);
+            helper(nums, v);
+            v.removeLast();
         }
     }
 }
