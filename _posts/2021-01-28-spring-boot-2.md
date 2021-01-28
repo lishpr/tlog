@@ -8,9 +8,7 @@ tags: Spring
 
 ### Notice: Chinese Content
 
-This article is a walkthrough of [this](https://spring.io/guides/gs/rest-service/) spring.io guide. As the guide itself is already in English, I will write this in Chinese.
-
-- - - - - - - - - - -
+This article is a walkthrough of [this](https://spring.io/guides/gs/rest-service/) spring.io guide. I feel the official spring guides are perfectly suitable for beginners. And, as the guide itself is already in English, I will write this in Chinese. Okay, without further ado, let's get started.
 
 <br>
 
