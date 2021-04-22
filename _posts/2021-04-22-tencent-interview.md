@@ -6,6 +6,12 @@ comments: false
 tags: Career
 ---
 
+### Notice: Chinese Content
+
+Chinese characters mess up with the word counting very much for systems that did not take foreign languages into account when developing. Chinese is written without spaces, or is a *Scriptio continua*. Therefore, the word count designed for English tends to recognize entire sentences into a word. This messes up a lot with my somewhat tidy homepage.
+
+<br>
+
 本文最初发于[牛客网](https://www.nowcoder.com/discuss/646742?type=post&order=create&pos=&page=1&channel=-1&source_id=search_post_nctrack)。
 
 目前已收到入职指引，回馈一下地里。八股文问了啥忘了，那就主要介绍format和timeline吧。我个人情况就，转码硕，之前有两段二线厂实习这样。
