@@ -7,11 +7,7 @@ permalink: /about/
 
 Hi, I'm Shori, a CS major in grad school.
 
-I was born and raised in Shanghai. I spent a couple years of middle school in Seattle. Then, I went back to get a bachelor's at Shanghai U. And now, I am on my way to a double master's at the University of California.
-
-The motivation of the blog is simple: I have the time to do it as I'm on my gap year; and, my current intern position at Arm requires me to read and experiment extensively on open-source code and technology.
-
-So, why not? I guess.
+I was born and raised in Shanghai. I spent a couple years of middle school in Seattle. Then, I went on to study physics at Shanghai U and UC San Diego.
 
 <br />
 
