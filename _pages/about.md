@@ -9,9 +9,9 @@ Hi, I'm Shori, a CS major in grad school.
 
 I was born and raised in Shanghai. I spent a couple years of middle school in Seattle. Then, I went on to study physics and a bit of computer science at Shanghai U and UC San Diego.
 
-After graduating from college, I decided to take on a career in software engineering, the hottest, most cutting-edge industry.
+After graduated from college, I decided to take on a career in software engineering, the hottest, most cutting-edge industry.
 
-As my gap year is reaching to an conclusion after a year of internship at NIO, Arm, and Tencent, I will start my master's program in computer science at the University of Washington.
+As I will conclude my gap year after a year of internship at NIO, Arm, and Tencent, I'm about to start my master's program in computer science at the University of Washington.
 
 <br />
 
